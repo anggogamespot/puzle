@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sliding Puzzle 3x3</title>
+    <!--
+      Game Sliding Puzzle (Puzzle Geser) 3x3
+      - Struktur semantik: header, main, footer
+      - Responsif: menggunakan vmin dan aspect-ratio agar kotak selalu persegi
+      - Gambar: wajib bernama "jawa.jpg" dan diletakkan di folder yang sama
+    -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Sliding Puzzle 3x3</h1>
+      <p class="subtitle">Susun kembali gambar "jawa.jpg" dengan menggeser kotak kosong.</p>
+    </header>
+
+    <main>
+      <!--
+        Container utama game: menyimpan area puzzle dan status
+      -->
+      <section class="game-container" aria-label="Area Permainan">
+        <!--
+          Area puzzle 3x3. Elemen tile akan dibuat dan diposisikan via JavaScript.
+          Kita hanya menyediakan kontainer dengan id"puzzle".
+        -->
+        <div id="puzzle" role="grid" aria-label="Puzzle 3x3"></div>
+
+        <!-- Status kemenangan ditampilkan di sini, menggunakan aria-live untuk aksesibilitas -->
+        <div id="status" class="status" aria-live="polite"></div>
+
+        <!-- Tombol reset untuk kemudahan pengguna -->
+        <div class="controls">
+          <button id="resetBtn" type="button">Acak Ulang</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>Made for: Puzzle Geser berbasis web (jawa.jpg)</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
